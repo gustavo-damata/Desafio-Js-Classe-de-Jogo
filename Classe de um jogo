@@ -1,0 +1,40 @@
+class SuperHeroi {
+    constructor(tipo) {
+        this.tipo = tipo;
+    }
+
+    atacar() {
+        let ataque = "";
+
+        switch (this.tipo) {
+            case "mago":
+                ataque = "usou magia";
+                break;
+            case "guerreiro":
+                ataque = "usou espada";
+                break;
+            case "monge":
+                ataque = "usou artes marciais";
+                break;
+            case "ninja":
+                ataque = "usou shuriken";
+                break;
+            default:
+                ataque = "atacou";
+        }
+
+        console.log(`O ${this.tipo} atacou e ${ataque}`);
+    }
+}
+
+// Classe SuperHeroi
+const mago = new SuperHeroi("mago");
+const guerreiro = new SuperHeroi("guerreiro");
+const monge = new SuperHeroi("monge");
+const ninja = new SuperHeroi("ninja");
+
+mago.atacar();
+guerreiro.atacar();
+monge.atacar();
+ninja.atacar();
+}
